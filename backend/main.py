@@ -1,11 +1,21 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
+from fastapi.responses import JSONResponse, Response
+from pydantic import BaseModel, field_validator
 import heapq
-from typing import List, Dict, Any, Optional
+import logging
+import json
+import os
+from typing import List, Optional
+from functools import lru_cache
 
-app = FastAPI(title="Flight Route Mapping API")
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
+app = FastAPI(title="Indian Flight Route Mapping API")
+
+# Configure CORS
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -14,91 +24,124 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-airports = [
-    {"id": "JFK", "name": "John F. Kennedy", "x": 300, "y": 200},
-    {"id": "LAX", "name": "Los Angeles", "x": 100, "y": 250},
-    {"id": "ORD", "name": "Chicago O'Hare", "x": 220, "y": 180},
-    {"id": "ATL", "name": "Atlanta", "x": 280, "y": 300},
-    {"id": "DFW", "name": "Dallas/Fort Worth", "x": 180, "y": 320},
-    {"id": "LHR", "name": "London Heathrow", "x": 400, "y": 150},
-    {"id": "CDG", "name": "Paris Charles de Gaulle", "x": 420, "y": 200},
-    {"id": "DXB", "name": "Dubai", "x": 500, "y": 250},
-    {"id": "HND", "name": "Tokyo Haneda", "x": 600, "y": 220},
-    {"id": "SIN", "name": "Singapore Changi", "x": 550, "y": 350},
-    {"id": "SYD", "name": "Sydney", "x": 650, "y": 400},
-    {"id": "GRU", "name": "São Paulo", "x": 250, "y": 400},
-    {"id": "MEX", "name": "Mexico City", "x": 150, "y": 350},
-    {"id": "YYZ", "name": "Toronto Pearson", "x": 250, "y": 150},
-    {"id": "FRA", "name": "Frankfurt", "x": 380, "y": 180},
-    {"id": "AMS", "name": "Amsterdam", "x": 390, "y": 140},
-]
+# Global exception handler
+@app.exception_handler(Exception)
+async def global_exception_handler(request: Request, exc: Exception):
+    logger.error(f"Unhandled exception: {exc}")
+    return JSONResponse(
+        status_code=500,
+        content={"error": "An unexpected error occurred. Please try again later."},
+    )
 
-routes = [
-    {"source": "JFK", "target": "LAX", "distance": 2475, "cost": 350},
-    {"source": "JFK", "target": "LHR", "distance": 3461, "cost": 450},
-    {"source": "LAX", "target": "ORD", "distance": 1745, "cost": 250},
-    {"source": "ORD", "target": "ATL", "distance": 606, "cost": 150},
-    {"source": "ATL", "target": "DFW", "distance": 732, "cost": 180},
-    {"source": "LHR", "target": "CDG", "distance": 214, "cost": 100},
-    {"source": "CDG", "target": "DXB", "distance": 3250, "cost": 420},
-    {"source": "DXB", "target": "HND", "distance": 4828, "cost": 580},
-    {"source": "HND", "target": "SIN", "distance": 3319, "cost": 400},
-    {"source": "SIN", "target": "SYD", "distance": 3907, "cost": 440},
-    {"source": "JFK", "target": "ORD", "distance": 740, "cost": 180},
-    {"source": "LAX", "target": "SYD", "distance": 7490, "cost": 700},
-    {"source": "ATL", "target": "GRU", "distance": 4751, "cost": 530},
-    {"source": "MEX", "target": "GRU", "distance": 4678, "cost": 520},
-    {"source": "MEX", "target": "LAX", "distance": 1553, "cost": 230},
-    {"source": "YYZ", "target": "ORD", "distance": 436, "cost": 130},
-    {"source": "YYZ", "target": "JFK", "distance": 371, "cost": 120},
-    {"source": "LHR", "target": "FRA", "distance": 398, "cost": 130},
-    {"source": "FRA", "target": "AMS", "distance": 227, "cost": 110},
-    {"source": "AMS", "target": "LHR", "distance": 229, "cost": 110},
-    {"source": "DFW", "target": "MEX", "distance": 934, "cost": 200},
-    {"source": "DFW", "target": "ORD", "distance": 802, "cost": 190},
-    {"source": "ATL", "target": "JFK", "distance": 760, "cost": 185},
-]
+# Load airport and route data from JSON files
+DATA_FILE = os.path.join(os.path.dirname(__file__), "data", "reduced_map_data.json")
+
+try:
+    logger.info(f"Attempting to load data from {DATA_FILE}")
+    if not os.path.exists(DATA_FILE):
+        logger.error(f"Data file not found: {DATA_FILE}")
+        raise FileNotFoundError(f"Data file not found: {DATA_FILE}")
+        
+    with open(DATA_FILE, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+        
+    if 'airports' not in data or 'routes' not in data:
+        logger.error(f"Invalid data format in {DATA_FILE}: missing 'airports' or 'routes' keys")
+        raise ValueError(f"Invalid data format in {DATA_FILE}: missing required keys")
+        
+    airports = data['airports']
+    routes = data['routes']
+    
+    logger.info(f"Loaded {len(airports)} airports and {len(routes)} routes from {DATA_FILE}")
+    
+    # Log a sample of the data to verify structure
+    if airports and routes:
+        logger.info(f"Sample airport: {airports[0]}")
+        logger.info(f"Sample route: {routes[0]}")
+except Exception as e:
+    logger.error(f"Error loading data from {DATA_FILE}: {e}")
+    # Fallback to empty data
+    airports = []
+    routes = []
 
 class PathRequest(BaseModel):
     source: str
     destination: str
+    layover: str | None = None  # Optional layover airport
     metric: str = "cost"
+    
+    @field_validator('metric')
+    @classmethod
+    def validate_metric(cls, v):
+        if v not in ['cost', 'distance']:
+            raise ValueError("Metric must be either 'cost' or 'distance'")
+        return v
 
 class PathResponse(BaseModel):
     path: List[str]
     total_cost: float
     total_distance: float
+    total_time: float
     error: Optional[str] = None
+    
+# We'll return the GeoJSON directly as a Response instead of parsing it
+# class GeoJsonResponse(BaseModel):
+#     geojson: dict
 
+@lru_cache(maxsize=1)
 def build_graph():
+    """Build the airport graph with caching for better performance."""
     graph = {}
-
+    
+    # Initialize the graph with all airports
     for airport in airports:
         graph[airport["id"]] = {}
-
+    
+    # Create connections for all routes
     for route in routes:
         source = route["source"]
         target = route["target"]
         distance = route["distance"]
         cost = route["cost"]
-
-        graph[source][target] = {"distance": distance, "cost": cost}
-        graph[target][source] = {"distance": distance, "cost": cost}
-
+        
+        # Calculate flight time in hours (assuming average speed of 800 km/h)
+        flight_time = distance / 800  # Time in hours
+        
+        # Check for missing airports (should never happen, but just in case)
+        if source not in graph or target not in graph:
+            logger.warning(f"Invalid route: {source} -> {target}, skipping")
+            continue
+            
+        # Add routes in both directions to ensure graph connectivity
+        # We want to make sure all airports are reachable
+        graph[source][target] = {"distance": distance, "cost": cost, "time": flight_time}
+        graph[target][source] = {"distance": distance, "cost": cost, "time": flight_time}
+    
+    logger.info(f"Graph built with {len(graph)} airports and {len(routes)} routes (bidirectional)")
     return graph
 
 def dijkstra(graph, start, end, metric):
+    """Optimized Dijkstra's algorithm implementation."""
+    if start not in graph or end not in graph:
+        logger.error(f"Invalid airport IDs: start={start}, end={end}")
+        return [], 0, 0, 0
+        
+    # Initialize data structures
     distances = {node: float('infinity') for node in graph}
     distances[start] = 0
-
     priority_queue = [(0, start)]
     previous = {node: None for node in graph}
     visited = set()
-
+    
+    # Early exit if start and end are the same
+    if start == end:
+        return [start], 0, 0, 0
+    
+    # Dijkstra's algorithm main loop
     while priority_queue:
         current_distance, current_node = heapq.heappop(priority_queue)
 
-        if current_node == end:
+        if current_node == end:  # Found the destination
             break
 
         if current_node in visited:
@@ -118,6 +161,11 @@ def dijkstra(graph, start, end, metric):
                 previous[neighbor] = current_node
                 heapq.heappush(priority_queue, (distance, neighbor))
 
+    # If end node wasn't reached
+    if distances[end] == float('infinity'):
+        return [], 0, 0, 0
+
+    # Reconstruct path
     path = []
     current = end
 
@@ -127,11 +175,10 @@ def dijkstra(graph, start, end, metric):
 
     path.reverse()
 
+    # Calculate totals
     total_cost = 0
     total_distance = 0
-
-    if len(path) <= 1:
-        return path, total_cost, total_distance
+    total_time = 0
 
     for i in range(len(path) - 1):
         current = path[i]
@@ -139,51 +186,145 @@ def dijkstra(graph, start, end, metric):
         edge_data = graph[current][next_node]
         total_cost += edge_data["cost"]
         total_distance += edge_data["distance"]
+        total_time += edge_data["time"]
 
-    return path, total_cost, total_distance
+    return path, total_cost, total_distance, total_time
 
 @app.get("/airports")
 def get_airports():
+    logger.info(f"Returning {len(airports)} airports")
+    if not airports:
+        logger.warning("No airport data available!")
     return airports
 
 @app.get("/routes")
 def get_routes():
+    logger.info(f"Returning {len(routes)} routes")
+    if not routes:
+        logger.warning("No route data available!")
     return routes
+    
+@app.get("/india-map")
+def get_india_map():
+    try:
+        map_file = os.path.join(os.path.dirname(__file__), "data", "in.json")
+        logger.info(f"Loading India map from: {map_file}")
+        
+        if not os.path.exists(map_file):
+            logger.error(f"Map file not found: {map_file}")
+            raise HTTPException(status_code=404, detail="India map file not found")
+        
+        logger.info(f"Map file exists, size: {os.path.getsize(map_file)} bytes")
+            
+        with open(map_file, 'r', encoding='utf-8') as f:
+            content = f.read()
+            
+        # Instead of parsing, just return the raw JSON content
+        return Response(content=content, media_type="application/json")
+            
+    except Exception as e:
+        logger.error(f"Error loading India GeoJSON map: {e}")
+        raise HTTPException(status_code=500, detail=f"Could not load India map data: {str(e)}")
 
 @app.post("/find-path", response_model=PathResponse)
 def find_path(request: PathRequest):
     source = request.source
     destination = request.destination
+    layover = request.layover
     metric = request.metric
+    
+    logger.info(f"Finding path from {source} to {destination} via {layover} optimizing for {metric}")
 
-    if metric not in ['cost', 'distance']:
-        raise HTTPException(status_code=400, detail="Metric must be either 'cost' or 'distance'")
-
+    # Use the cached graph
     graph = build_graph()
 
+    # Quick validation of airports
     if source not in graph:
+        logger.warning(f"Source airport not found: {source}")
         raise HTTPException(status_code=404, detail=f"Source airport {source} not found")
 
     if destination not in graph:
+        logger.warning(f"Destination airport not found: {destination}")
         raise HTTPException(status_code=404, detail=f"Destination airport {destination} not found")
+        
+    if layover and layover not in graph:
+        logger.warning(f"Layover airport not found: {layover}")
+        raise HTTPException(status_code=404, detail=f"Layover airport {layover} not found")
 
-    path, total_cost, total_distance = dijkstra(graph, source, destination, metric)
-
-    if not path or path[0] != source:
+    # Early return for same source and destination
+    if source == destination:
+        logger.info(f"Source and destination are the same: {source}")
         return {
-            "error": "No valid path found between these airports",
-            "path": [],
+            "path": [source],
             "total_cost": 0,
-            "total_distance": 0
+            "total_distance": 0,
+            "total_time": 0,
+            "error": None
         }
 
-    return {
-        "path": path,
-        "total_cost": total_cost,
-        "total_distance": total_distance,
-        "error": None
-    }
+    # Find the shortest path
+    try:
+        if layover:
+            logger.info(f"Finding path with layover at {layover}")
+            # First find path from source to layover
+            path1, cost1, distance1, time1 = dijkstra(graph, source, layover, metric)
+            if not path1 or path1[0] != source:
+                logger.warning(f"No path found from {source} to layover {layover}")
+                return {
+                    "error": f"No valid path found between {source} and layover {layover}",
+                    "path": [],
+                    "total_cost": 0,
+                    "total_distance": 0,
+                    "total_time": 0
+                }
+            
+            # Then find path from layover to destination
+            path2, cost2, distance2, time2 = dijkstra(graph, layover, destination, metric)
+            if not path2 or path2[0] != layover:
+                logger.warning(f"No path found from layover {layover} to {destination}")
+                return {
+                    "error": f"No valid path found between layover {layover} and {destination}",
+                    "path": [],
+                    "total_cost": 0,
+                    "total_distance": 0,
+                    "total_time": 0
+                }
+            
+            # Combine paths (remove duplicate layover)
+            path = path1[:-1] + path2  # Remove layover from first path to avoid duplication
+            total_cost = cost1 + cost2
+            total_distance = distance1 + distance2
+            total_time = time1 + time2
+            
+            logger.info(f"Found layover path: {' → '.join(path)}")
+            logger.info(f"Path details: cost={total_cost}, distance={total_distance}, time={total_time}")
+        else:
+            path, total_cost, total_distance, total_time = dijkstra(graph, source, destination, metric)
+        
+        # Check if a valid path was found
+        if not path or path[0] != source:
+            logger.info(f"No path found between {source} and {destination}")
+            return {
+                "error": "No valid path found between these airports",
+                "path": [],
+                "total_cost": 0,
+                "total_distance": 0,
+                "total_time": 0
+            }
+            
+        logger.info(f"Path found: {' → '.join(path)}, cost: {total_cost}, distance: {total_distance}, time: {total_time}")
+        return {
+            "path": path,
+            "total_cost": total_cost,
+            "total_distance": total_distance,
+            "total_time": total_time,
+            "error": None
+        }
+    except Exception as e:
+        logger.error(f"Error finding path: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Failed to calculate path: {str(e)}")
 
 if __name__ == "__main__":
     import uvicorn
+    logger.info("Starting Flight Route Mapping API server")
     uvicorn.run(app, host="0.0.0.0", port=8000)

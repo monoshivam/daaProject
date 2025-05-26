@@ -1,0 +1,661 @@
+{
+  "airports": [
+    {
+      "id": "AMD",
+      "name": "Ahmedabad Airport",
+      "state": "Gujarat",
+      "x": 50,
+      "y": 153,
+      "lat": 23.0216,
+      "lng": 72.5722
+    },
+    {
+      "id": "BLR",
+      "name": "Bengaluru Airport",
+      "state": "Karnataka",
+      "x": 218,
+      "y": 421,
+      "lat": 13.1986,
+      "lng": 77.7066
+    },
+    {
+      "id": "BOM",
+      "name": "Mumbai Airport",
+      "state": "Maharashtra",
+      "x": 59,
+      "y": 260,
+      "lat": 19.0895,
+      "lng": 72.8656
+    },
+    {
+      "id": "CCU",
+      "name": "Kolkata Airport",
+      "state": "West Bengal",
+      "x": 571,
+      "y": 163,
+      "lat": 22.6547,
+      "lng": 88.4467
+    },
+    {
+      "id": "GOX",
+      "name": "Goa Airport",
+      "state": "Goa",
+      "x": 91,
+      "y": 361,
+      "lat": 15.3808,
+      "lng": 73.8314
+    },
+    {
+      "id": "HYD",
+      "name": "Hyderabad Airport",
+      "state": "Telangana",
+      "x": 242,
+      "y": 311,
+      "lat": 17.2403,
+      "lng": 78.4294
+    },
+    {
+      "id": "JAI",
+      "name": "Jaipur Airport",
+      "state": "Rajasthan",
+      "x": 156,
+      "y": 50,
+      "lat": 26.824,
+      "lng": 75.812
+    },
+    {
+      "id": "BBI",
+      "name": "Bhubaneswar Airport",
+      "state": "Odisha",
+      "x": 484,
+      "y": 229,
+      "lat": 20.2475,
+      "lng": 85.8167
+    },
+    {
+      "id": "VTZ",
+      "name": "Visakhapatnam Airport",
+      "state": "Andhra Pradesh",
+      "x": 399,
+      "y": 298,
+      "lat": 17.7266,
+      "lng": 83.2248
+    },
+    {
+      "id": "COK",
+      "name": "Kochi Airport",
+      "state": "Kerala",
+      "x": 171,
+      "y": 508,
+      "lat": 9.9978,
+      "lng": 76.2714
+    },
+    {
+      "id": "GAU",
+      "name": "Guwahati Airport",
+      "state": "Assam",
+      "x": 674,
+      "y": 69,
+      "lat": 26.106,
+      "lng": 91.5864
+    },
+    {
+      "id": "LKO",
+      "name": "Lucknow Airport",
+      "state": "Uttar Pradesh",
+      "x": 323,
+      "y": 51,
+      "lat": 26.7606,
+      "lng": 80.8893
+    },
+    {
+      "id": "MAA",
+      "name": "Chennai Airport",
+      "state": "Tamil Nadu",
+      "x": 299,
+      "y": 427,
+      "lat": 12.9941,
+      "lng": 80.1709
+    },
+    {
+      "id": "NAG",
+      "name": "Nagpur Airport",
+      "state": "Maharashtra",
+      "x": 262,
+      "y": 206,
+      "lat": 21.092,
+      "lng": 79.0493
+    },
+    {
+      "id": "PNQ",
+      "name": "Pune Airport",
+      "state": "Maharashtra",
+      "x": 93,
+      "y": 274,
+      "lat": 18.5813,
+      "lng": 73.9091
+    },
+    {
+      "id": "TRV",
+      "name": "Trivandrum Airport",
+      "state": "Kerala",
+      "x": 192,
+      "y": 550,
+      "lat": 8.4855,
+      "lng": 76.92
+    },
+    {
+      "id": "IMF",
+      "name": "Imphal Airport",
+      "state": "Manipur",
+      "x": 750,
+      "y": 106,
+      "lat": 24.7641,
+      "lng": 93.8977
+    },
+    {
+      "id": "IXA",
+      "name": "Agartala Airport",
+      "state": "Tripura",
+      "x": 662,
+      "y": 130,
+      "lat": 23.8877,
+      "lng": 91.2404
+    },
+    {
+      "id": "IXR",
+      "name": "Ranchi Airport",
+      "state": "Jharkhand",
+      "x": 468,
+      "y": 145,
+      "lat": 23.3148,
+      "lng": 85.3213
+    },
+    {
+      "id": "PAT",
+      "name": "Patna Airport",
+      "state": "Bihar",
+      "x": 460,
+      "y": 83,
+      "lat": 25.5941,
+      "lng": 85.088
+    },
+    {
+      "id": "RPR",
+      "name": "Raipur Airport",
+      "state": "Chhattisgarh",
+      "x": 350,
+      "y": 203,
+      "lat": 21.1795,
+      "lng": 81.7386
+    },
+    {
+      "id": "SHL",
+      "name": "Shillong Airport",
+      "state": "Meghalaya",
+      "x": 686,
+      "y": 84,
+      "lat": 25.569,
+      "lng": 91.9549
+    },
+    {
+      "id": "IDR",
+      "name": "Indore Airport",
+      "state": "Madhya Pradesh",
+      "x": 155,
+      "y": 161,
+      "lat": 22.722,
+      "lng": 75.8011
+    }
+  ],
+  "routes": [
+    {
+      "source": "AMD",
+      "target": "BOM",
+      "distance": 523.6727305437843,
+      "cost": 4989,
+      "direct": true
+    },
+    {
+      "source": "AMD",
+      "target": "CCU",
+      "distance": 1955.6987305203843,
+      "cost": 13439,
+      "direct": true
+    },
+    {
+      "source": "AMD",
+      "target": "HYD",
+      "distance": 1100.3111374462499,
+      "cost": 12082,
+      "direct": true
+    },
+    {
+      "source": "BBI",
+      "target": "CCU",
+      "distance": 204.2878066965811,
+      "cost": 13182,
+      "direct": true
+    },
+    {
+      "source": "BBI",
+      "target": "VTZ",
+      "distance": 235.16601233565638,
+      "cost": 12306,
+      "direct": true
+    },
+    {
+      "source": "BLR",
+      "target": "BOM",
+      "distance": 1071.5709227456766,
+      "cost": 11416,
+      "direct": true
+    },
+    {
+      "source": "BLR",
+      "target": "COK",
+      "distance": 503.06145239658883,
+      "cost": 6058,
+      "direct": true
+    },
+    {
+      "source": "BLR",
+      "target": "GAU",
+      "distance": 1074.9455389019727,
+      "cost": 42323,
+      "direct": true
+    },
+    {
+      "source": "BLR",
+      "target": "HYD",
+      "distance": 546.5551825160594,
+      "cost": 5154,
+      "direct": true
+    },
+    {
+      "source": "BLR",
+      "target": "MAA",
+      "distance": 170.62483962662733,
+      "cost": 5962,
+      "direct": true
+    },
+    {
+      "source": "BLR",
+      "target": "PNQ",
+      "distance": 374.4332842683032,
+      "cost": 22195,
+      "direct": true
+    },
+    {
+      "source": "CCU",
+      "target": "BBI",
+      "distance": 471.4004554872264,
+      "cost": 4113,
+      "direct": true
+    },
+    {
+      "source": "CCU",
+      "target": "GAU",
+      "distance": 306.27457508897936,
+      "cost": 17341,
+      "direct": true
+    },
+    {
+      "source": "CCU",
+      "target": "IMF",
+      "distance": 389.84429188761146,
+      "cost": 19425,
+      "direct": true
+    },
+    {
+      "source": "CCU",
+      "target": "IXA",
+      "distance": 381.6134590153075,
+      "cost": 6560,
+      "direct": true
+    },
+    {
+      "source": "CCU",
+      "target": "IXR",
+      "distance": 363.441651335957,
+      "cost": 6749,
+      "direct": true
+    },
+    {
+      "source": "COK",
+      "target": "BLR",
+      "distance": 492.2862935253601,
+      "cost": 6129,
+      "direct": true
+    },
+    {
+      "source": "COK",
+      "target": "MAA",
+      "distance": 644.7692962416232,
+      "cost": 8738,
+      "direct": true
+    },
+    {
+      "source": "COK",
+      "target": "TRV",
+      "distance": 112.22886006099408,
+      "cost": 5450,
+      "direct": true
+    },
+    {
+      "source": "GAU",
+      "target": "IMF",
+      "distance": 177.59935678486505,
+      "cost": 6724,
+      "direct": true
+    },
+    {
+      "source": "GAU",
+      "target": "IXA",
+      "distance": 303.6454421071702,
+      "cost": 4035,
+      "direct": true
+    },
+    {
+      "source": "HYD",
+      "target": "BLR",
+      "distance": 522.0519512322544,
+      "cost": 7071,
+      "direct": true
+    },
+    {
+      "source": "HYD",
+      "target": "BOM",
+      "distance": 746.7684165786889,
+      "cost": 9760,
+      "direct": true
+    },
+    {
+      "source": "HYD",
+      "target": "MAA",
+      "distance": 623.4433307369201,
+      "cost": 7579,
+      "direct": true
+    },
+    {
+      "source": "HYD",
+      "target": "PNQ",
+      "distance": 313.1386651321255,
+      "cost": 20180,
+      "direct": true
+    },
+    {
+      "source": "IMF",
+      "target": "GAU",
+      "distance": 152.57034771580192,
+      "cost": 9536,
+      "direct": true
+    },
+    {
+      "source": "IMF",
+      "target": "IXA",
+      "distance": 354.33373494568065,
+      "cost": 2881,
+      "direct": true
+    },
+    {
+      "source": "IXA",
+      "target": "CCU",
+      "distance": 177.97309772552916,
+      "cost": 11428,
+      "direct": true
+    },
+    {
+      "source": "IXA",
+      "target": "GAU",
+      "distance": 140.19960298133415,
+      "cost": 6263,
+      "direct": true
+    },
+    {
+      "source": "IXA",
+      "target": "IMF",
+      "distance": 151.59291325498535,
+      "cost": 5040,
+      "direct": true
+    },
+    {
+      "source": "JAI",
+      "target": "AMD",
+      "distance": 627.7845292929671,
+      "cost": 5617,
+      "direct": true
+    },
+    {
+      "source": "JAI",
+      "target": "CCU",
+      "distance": 753.9344154966122,
+      "cost": 25066,
+      "direct": true
+    },
+    {
+      "source": "LKO",
+      "target": "PAT",
+      "distance": 520.0646548232237,
+      "cost": 3955,
+      "direct": true
+    },
+    {
+      "source": "MAA",
+      "target": "BLR",
+      "distance": 346.9204076525369,
+      "cost": 5519,
+      "direct": true
+    },
+    {
+      "source": "MAA",
+      "target": "COK",
+      "distance": 346.7937669241259,
+      "cost": 16887,
+      "direct": true
+    },
+    {
+      "source": "MAA",
+      "target": "HYD",
+      "distance": 279.00590427556597,
+      "cost": 11829,
+      "direct": true
+    },
+    {
+      "source": "MAA",
+      "target": "PNQ",
+      "distance": 1173.9110859202888,
+      "cost": 7818,
+      "direct": true
+    },
+    {
+      "source": "MAA",
+      "target": "TRV",
+      "distance": 774.9186823789365,
+      "cost": 8409,
+      "direct": true
+    },
+    {
+      "source": "PNQ",
+      "target": "NAG",
+      "distance": 709.5768392301368,
+      "cost": 7261,
+      "direct": true
+    },
+    {
+      "source": "RPR",
+      "target": "HYD",
+      "distance": 358.240132540061,
+      "cost": 14612,
+      "direct": true
+    },
+    {
+      "source": "SHL",
+      "target": "CCU",
+      "distance": 533.0837874931997,
+      "cost": 5623,
+      "direct": true
+    },
+    {
+      "source": "VTZ",
+      "target": "BBI",
+      "distance": 222.17743073361697,
+      "cost": 12205,
+      "direct": true
+    },
+    {
+      "source": "VTZ",
+      "target": "CCU",
+      "distance": 914.7913440502679,
+      "cost": 7447,
+      "direct": true
+    },
+    {
+      "source": "VTZ",
+      "target": "HYD",
+      "distance": 303.8288204305597,
+      "cost": 14843,
+      "direct": true
+    },
+    {
+      "source": "GOX",
+      "target": "PNQ",
+      "distance": 215.2984087246716,
+      "direct": true,
+      "cost": 14630
+    },
+    {
+      "source": "GOX",
+      "target": "BOM",
+      "distance": 224.66450543526616,
+      "direct": true,
+      "cost": 14576
+    },
+    {
+      "source": "GOX",
+      "target": "BLR",
+      "distance": 268.3025042276731,
+      "direct": true,
+      "cost": 14812
+    },
+    {
+      "source": "JAI",
+      "target": "AMD",
+      "distance": 327.049540441981,
+      "direct": true,
+      "cost": 16894
+    },
+    {
+      "source": "LKO",
+      "target": "JAI",
+      "distance": 276.63915083358876,
+      "direct": true,
+      "cost": 14308
+    },
+    {
+      "source": "LKO",
+      "target": "BBI",
+      "distance": 1006.2454532808349,
+      "direct": true,
+      "cost": 8207
+    },
+    {
+      "source": "NAG",
+      "target": "HYD",
+      "distance": 275.4821259788036,
+      "direct": true,
+      "cost": 13072
+    },
+    {
+      "source": "NAG",
+      "target": "VTZ",
+      "distance": 291.6276581617572,
+      "direct": true,
+      "cost": 17454
+    },
+    {
+      "source": "TRV",
+      "target": "COK",
+      "distance": 117.22537212342726,
+      "direct": true,
+      "cost": 7402
+    },
+    {
+      "source": "IXR",
+      "target": "CCU",
+      "distance": 180.56984720328927,
+      "direct": true,
+      "cost": 9621
+    },
+    {
+      "source": "IXR",
+      "target": "BBI",
+      "distance": 203.47218529369528,
+      "direct": true,
+      "cost": 12259
+    },
+    {
+      "source": "PAT",
+      "target": "IXR",
+      "distance": 319.4483389185084,
+      "direct": true,
+      "cost": 4931
+    },
+    {
+      "source": "PAT",
+      "target": "LKO",
+      "distance": 527.815460744625,
+      "direct": true,
+      "cost": 3876
+    },
+    {
+      "source": "RPR",
+      "target": "NAG",
+      "distance": 170.06678818943413,
+      "direct": true,
+      "cost": 5782
+    },
+    {
+      "source": "RPR",
+      "target": "VTZ",
+      "distance": 240.096827902861,
+      "direct": true,
+      "cost": 7686
+    },
+    {
+      "source": "SHL",
+      "target": "GAU",
+      "distance": 40.826115717850904,
+      "direct": true,
+      "cost": 3755
+    },
+    {
+      "source": "SHL",
+      "target": "IXA",
+      "distance": 103.8279287297466,
+      "direct": true,
+      "cost": 4987
+    },
+    {
+      "source": "IDR",
+      "target": "AMD",
+      "distance": 412.42177424541325,
+      "direct": true,
+      "cost": 4269
+    },
+    {
+      "source": "IDR",
+      "target": "NAG",
+      "distance": 491.50904814801413,
+      "direct": true,
+      "cost": 6422
+    },
+    {
+      "source": "IDR",
+      "target": "JAI",
+      "distance": 543.0968141026353,
+      "direct": true,
+      "cost": 8056
+    }
+  ]
+}

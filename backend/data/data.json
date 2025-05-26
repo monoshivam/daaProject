@@ -1,0 +1,920 @@
+[
+  {
+    "origin_airport": "AMD",
+    "origin_state": "Gujarat",
+    "destination_airport": "BLR",
+    "destination_state": "Karnataka",
+    "distance_km": 1221.8,
+    "direct_flight": "Yes",
+    "flight_price_inr": 10000
+  },
+  {
+    "origin_airport": "AMD",
+    "origin_state": "Gujarat",
+    "destination_airport": "BOM",
+    "destination_state": "Maharashtra",
+    "distance_km": 443.2,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "AMD",
+    "origin_state": "Gujarat",
+    "destination_airport": "CCU",
+    "destination_state": "West Bengal",
+    "distance_km": 1619.9,
+    "direct_flight": "Yes",
+    "flight_price_inr": 10000
+  },
+  {
+    "origin_airport": "AMD",
+    "origin_state": "Gujarat",
+    "destination_airport": "GOX",
+    "destination_state": "Goa",
+    "distance_km": 826.9,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "AMD",
+    "origin_state": "Gujarat",
+    "destination_airport": "HYD",
+    "destination_state": "Telangana",
+    "distance_km": 888.0,
+    "direct_flight": "Yes",
+    "flight_price_inr": 8000
+  },
+  {
+    "origin_airport": "AMD",
+    "origin_state": "Gujarat",
+    "destination_airport": "JAI",
+    "destination_state": "Rajasthan",
+    "distance_km": 525.5,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "BBI",
+    "origin_state": "Odisha",
+    "destination_airport": "BLR",
+    "destination_state": "Karnataka",
+    "distance_km": 1080.2,
+    "direct_flight": "Yes",
+    "flight_price_inr": 8000
+  },
+  {
+    "origin_airport": "BBI",
+    "origin_state": "Odisha",
+    "destination_airport": "BOM",
+    "destination_state": "Maharashtra",
+    "distance_km": 1048.6,
+    "direct_flight": "Yes",
+    "flight_price_inr": 8000
+  },
+  {
+    "origin_airport": "BBI",
+    "origin_state": "Odisha",
+    "destination_airport": "CCU",
+    "destination_state": "West Bengal",
+    "distance_km": 441.4,
+    "direct_flight": "Yes",
+    "flight_price_inr": 4000
+  },
+  {
+    "origin_airport": "BBI",
+    "origin_state": "Odisha",
+    "destination_airport": "HYD",
+    "destination_state": "Telangana",
+    "distance_km": 1113.6,
+    "direct_flight": "Yes",
+    "flight_price_inr": 8000
+  },
+  {
+    "origin_airport": "BBI",
+    "origin_state": "Odisha",
+    "destination_airport": "VTZ",
+    "destination_state": "Andhra Pradesh",
+    "distance_km": 646.3,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "BLR",
+    "origin_state": "Karnataka",
+    "destination_airport": "AMD",
+    "destination_state": "Gujarat",
+    "distance_km": 1221.8,
+    "direct_flight": "Yes",
+    "flight_price_inr": 10000
+  },
+  {
+    "origin_airport": "BLR",
+    "origin_state": "Karnataka",
+    "destination_airport": "BBI",
+    "destination_state": "Odisha",
+    "distance_km": 1080.2,
+    "direct_flight": "Yes",
+    "flight_price_inr": 8000
+  },
+  {
+    "origin_airport": "BLR",
+    "origin_state": "Karnataka",
+    "destination_airport": "BOM",
+    "destination_state": "Maharashtra",
+    "distance_km": 843.9,
+    "direct_flight": "Yes",
+    "flight_price_inr": 9000
+  },
+  {
+    "origin_airport": "BLR",
+    "origin_state": "Karnataka",
+    "destination_airport": "CCU",
+    "destination_state": "West Bengal",
+    "distance_km": 1570.1,
+    "direct_flight": "Yes",
+    "flight_price_inr": 10000
+  },
+  {
+    "origin_airport": "BLR",
+    "origin_state": "Karnataka",
+    "destination_airport": "COK",
+    "destination_state": "Kerala",
+    "distance_km": 505.8,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "BLR",
+    "origin_state": "Karnataka",
+    "destination_airport": "GAU",
+    "destination_state": "Assam",
+    "distance_km": 2550.0,
+    "direct_flight": "Yes",
+    "flight_price_inr": 10000
+  },
+  {
+    "origin_airport": "BLR",
+    "origin_state": "Karnataka",
+    "destination_airport": "GOX",
+    "destination_state": "Goa",
+    "distance_km": 467.6,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "BLR",
+    "origin_state": "Karnataka",
+    "destination_airport": "HYD",
+    "destination_state": "Telangana",
+    "distance_km": 496.4,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "BLR",
+    "origin_state": "Karnataka",
+    "destination_airport": "JAI",
+    "destination_state": "Rajasthan",
+    "distance_km": 1645.8,
+    "direct_flight": "Yes",
+    "flight_price_inr": 10000
+  },
+  {
+    "origin_airport": "BLR",
+    "origin_state": "Karnataka",
+    "destination_airport": "LKO",
+    "destination_state": "Uttar Pradesh",
+    "distance_km": 1641.8,
+    "direct_flight": "Yes",
+    "flight_price_inr": 10000
+  },
+  {
+    "origin_airport": "BLR",
+    "origin_state": "Karnataka",
+    "destination_airport": "MAA",
+    "destination_state": "Tamil Nadu",
+    "distance_km": 291.3,
+    "direct_flight": "Yes",
+    "flight_price_inr": 4000
+  },
+  {
+    "origin_airport": "BLR",
+    "origin_state": "Karnataka",
+    "destination_airport": "NAG",
+    "destination_state": "Maharashtra",
+    "distance_km": 737.5,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "BLR",
+    "origin_state": "Karnataka",
+    "destination_airport": "PNQ",
+    "destination_state": "Maharashtra",
+    "distance_km": 512.1,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "BLR",
+    "origin_state": "Karnataka",
+    "destination_airport": "TRV",
+    "destination_state": "Kerala",
+    "distance_km": 667.7,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "BLR",
+    "origin_state": "Karnataka",
+    "destination_airport": "VTZ",
+    "destination_state": "Andhra Pradesh",
+    "distance_km": 731.9,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "CCU",
+    "origin_state": "West Bengal",
+    "destination_airport": "AMD",
+    "destination_state": "Gujarat",
+    "distance_km": 1619.9,
+    "direct_flight": "Yes",
+    "flight_price_inr": 10000
+  },
+  {
+    "origin_airport": "CCU",
+    "origin_state": "West Bengal",
+    "destination_airport": "BBI",
+    "destination_state": "Odisha",
+    "distance_km": 441.4,
+    "direct_flight": "Yes",
+    "flight_price_inr": 4000
+  },
+  {
+    "origin_airport": "CCU",
+    "origin_state": "West Bengal",
+    "destination_airport": "BLR",
+    "destination_state": "Karnataka",
+    "distance_km": 1570.1,
+    "direct_flight": "Yes",
+    "flight_price_inr": 10000
+  },
+  {
+    "origin_airport": "CCU",
+    "origin_state": "West Bengal",
+    "destination_airport": "BOM",
+    "destination_state": "Maharashtra",
+    "distance_km": 1239.2,
+    "direct_flight": "Yes",
+    "flight_price_inr": 8000
+  },
+  {
+    "origin_airport": "CCU",
+    "origin_state": "West Bengal",
+    "destination_airport": "GAU",
+    "destination_state": "Assam",
+    "distance_km": 672.5,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "CCU",
+    "origin_state": "West Bengal",
+    "destination_airport": "HYD",
+    "destination_state": "Telangana",
+    "distance_km": 1482.0,
+    "direct_flight": "Yes",
+    "flight_price_inr": 8000
+  },
+  {
+    "origin_airport": "CCU",
+    "origin_state": "West Bengal",
+    "destination_airport": "IMF",
+    "destination_state": "Manipur",
+    "distance_km": 631.8,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "CCU",
+    "origin_state": "West Bengal",
+    "destination_airport": "IXA",
+    "destination_state": "Tripura",
+    "distance_km": 342.5,
+    "direct_flight": "Yes",
+    "flight_price_inr": 4000
+  },
+  {
+    "origin_airport": "CCU",
+    "origin_state": "West Bengal",
+    "destination_airport": "IXR",
+    "destination_state": "Jharkhand",
+    "distance_km": 397.1,
+    "direct_flight": "Yes",
+    "flight_price_inr": 4000
+  },
+  {
+    "origin_airport": "CCU",
+    "origin_state": "West Bengal",
+    "destination_airport": "JAI",
+    "destination_state": "Rajasthan",
+    "distance_km": 1528.8,
+    "direct_flight": "Yes",
+    "flight_price_inr": 10000
+  },
+  {
+    "origin_airport": "CCU",
+    "origin_state": "West Bengal",
+    "destination_airport": "MAA",
+    "destination_state": "Tamil Nadu",
+    "distance_km": 1373.2,
+    "direct_flight": "Yes",
+    "flight_price_inr": 9000
+  },
+  {
+    "origin_airport": "CCU",
+    "origin_state": "West Bengal",
+    "destination_airport": "NAG",
+    "destination_state": "Maharashtra",
+    "distance_km": 983.4,
+    "direct_flight": "Yes",
+    "flight_price_inr": 8000
+  },
+  {
+    "origin_airport": "CCU",
+    "origin_state": "West Bengal",
+    "destination_airport": "PAT",
+    "destination_state": "Bihar",
+    "distance_km": 397.3,
+    "direct_flight": "Yes",
+    "flight_price_inr": 4000
+  },
+  {
+    "origin_airport": "CCU",
+    "origin_state": "West Bengal",
+    "destination_airport": "PNQ",
+    "destination_state": "Maharashtra",
+    "distance_km": 1245.9,
+    "direct_flight": "Yes",
+    "flight_price_inr": 8000
+  },
+  {
+    "origin_airport": "CCU",
+    "origin_state": "West Bengal",
+    "destination_airport": "RPR",
+    "destination_state": "Chhattisgarh",
+    "distance_km": 966.0,
+    "direct_flight": "Yes",
+    "flight_price_inr": 8000
+  },
+  {
+    "origin_airport": "CCU",
+    "origin_state": "West Bengal",
+    "destination_airport": "SHL",
+    "destination_state": "Meghalaya",
+    "distance_km": 297.3,
+    "direct_flight": "Yes",
+    "flight_price_inr": 4000
+  },
+  {
+    "origin_airport": "COK",
+    "origin_state": "Kerala",
+    "destination_airport": "BLR",
+    "destination_state": "Karnataka",
+    "distance_km": 505.8,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "COK",
+    "origin_state": "Kerala",
+    "destination_airport": "BOM",
+    "destination_state": "Maharashtra",
+    "distance_km": 1039.6,
+    "direct_flight": "Yes",
+    "flight_price_inr": 8000
+  },
+  {
+    "origin_airport": "COK",
+    "origin_state": "Kerala",
+    "destination_airport": "HYD",
+    "destination_state": "Telangana",
+    "distance_km": 1103.5,
+    "direct_flight": "Yes",
+    "flight_price_inr": 8000
+  },
+  {
+    "origin_airport": "COK",
+    "origin_state": "Kerala",
+    "destination_airport": "MAA",
+    "destination_state": "Tamil Nadu",
+    "distance_km": 350.2,
+    "direct_flight": "Yes",
+    "flight_price_inr": 4000
+  },
+  {
+    "origin_airport": "COK",
+    "origin_state": "Kerala",
+    "destination_airport": "TRV",
+    "destination_state": "Kerala",
+    "distance_km": 237.8,
+    "direct_flight": "Yes",
+    "flight_price_inr": 4000
+  },
+  {
+    "origin_airport": "GAU",
+    "origin_state": "Assam",
+    "destination_airport": "BLR",
+    "destination_state": "Karnataka",
+    "distance_km": 2550.0,
+    "direct_flight": "Yes",
+    "flight_price_inr": 10000
+  },
+  {
+    "origin_airport": "GAU",
+    "origin_state": "Assam",
+    "destination_airport": "BOM",
+    "destination_state": "Maharashtra",
+    "distance_km": 2101.8,
+    "direct_flight": "Yes",
+    "flight_price_inr": 10000
+  },
+  {
+    "origin_airport": "GAU",
+    "origin_state": "Assam",
+    "destination_airport": "CCU",
+    "destination_state": "West Bengal",
+    "distance_km": 672.5,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "GAU",
+    "origin_state": "Assam",
+    "destination_airport": "IMF",
+    "destination_state": "Manipur",
+    "distance_km": 521.2,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "GAU",
+    "origin_state": "Assam",
+    "destination_airport": "IXA",
+    "destination_state": "Tripura",
+    "distance_km": 276.1,
+    "direct_flight": "Yes",
+    "flight_price_inr": 4000
+  },
+  {
+    "origin_airport": "HYD",
+    "origin_state": "Telangana",
+    "destination_airport": "AMD",
+    "destination_state": "Gujarat",
+    "distance_km": 888.0,
+    "direct_flight": "Yes",
+    "flight_price_inr": 8000
+  },
+  {
+    "origin_airport": "HYD",
+    "origin_state": "Telangana",
+    "destination_airport": "BBI",
+    "destination_state": "Odisha",
+    "distance_km": 1113.6,
+    "direct_flight": "Yes",
+    "flight_price_inr": 8000
+  },
+  {
+    "origin_airport": "HYD",
+    "origin_state": "Telangana",
+    "destination_airport": "BLR",
+    "destination_state": "Karnataka",
+    "distance_km": 496.4,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "HYD",
+    "origin_state": "Telangana",
+    "destination_airport": "BOM",
+    "destination_state": "Maharashtra",
+    "distance_km": 569.8,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "HYD",
+    "origin_state": "Telangana",
+    "destination_airport": "CCU",
+    "destination_state": "West Bengal",
+    "distance_km": 1482.0,
+    "direct_flight": "Yes",
+    "flight_price_inr": 8000
+  },
+  {
+    "origin_airport": "HYD",
+    "origin_state": "Telangana",
+    "destination_airport": "COK",
+    "destination_state": "Kerala",
+    "distance_km": 1103.5,
+    "direct_flight": "Yes",
+    "flight_price_inr": 8000
+  },
+  {
+    "origin_airport": "HYD",
+    "origin_state": "Telangana",
+    "destination_airport": "JAI",
+    "destination_state": "Rajasthan",
+    "distance_km": 1256.7,
+    "direct_flight": "Yes",
+    "flight_price_inr": 8000
+  },
+  {
+    "origin_airport": "HYD",
+    "origin_state": "Telangana",
+    "destination_airport": "MAA",
+    "destination_state": "Tamil Nadu",
+    "distance_km": 619.4,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "HYD",
+    "origin_state": "Telangana",
+    "destination_airport": "PNQ",
+    "destination_state": "Maharashtra",
+    "distance_km": 515.8,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "HYD",
+    "origin_state": "Telangana",
+    "destination_airport": "RPR",
+    "destination_state": "Chhattisgarh",
+    "distance_km": 497.1,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "HYD",
+    "origin_state": "Telangana",
+    "destination_airport": "VTZ",
+    "destination_state": "Andhra Pradesh",
+    "distance_km": 765.5,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "IMF",
+    "origin_state": "Manipur",
+    "destination_airport": "CCU",
+    "destination_state": "West Bengal",
+    "distance_km": 631.8,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "IMF",
+    "origin_state": "Manipur",
+    "destination_airport": "GAU",
+    "destination_state": "Assam",
+    "distance_km": 521.2,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "IMF",
+    "origin_state": "Manipur",
+    "destination_airport": "IXA",
+    "destination_state": "Tripura",
+    "distance_km": 194.7,
+    "direct_flight": "Yes",
+    "flight_price_inr": 4000
+  },
+  {
+    "origin_airport": "IXA",
+    "origin_state": "Tripura",
+    "destination_airport": "CCU",
+    "destination_state": "West Bengal",
+    "distance_km": 342.5,
+    "direct_flight": "Yes",
+    "flight_price_inr": 4000
+  },
+  {
+    "origin_airport": "IXA",
+    "origin_state": "Tripura",
+    "destination_airport": "GAU",
+    "destination_state": "Assam",
+    "distance_km": 276.1,
+    "direct_flight": "Yes",
+    "flight_price_inr": 4000
+  },
+  {
+    "origin_airport": "IXA",
+    "origin_state": "Tripura",
+    "destination_airport": "IMF",
+    "destination_state": "Manipur",
+    "distance_km": 194.7,
+    "direct_flight": "Yes",
+    "flight_price_inr": 4000
+  },
+  {
+    "origin_airport": "JAI",
+    "origin_state": "Rajasthan",
+    "destination_airport": "AMD",
+    "destination_state": "Gujarat",
+    "distance_km": 525.5,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "JAI",
+    "origin_state": "Rajasthan",
+    "destination_airport": "BLR",
+    "destination_state": "Karnataka",
+    "distance_km": 1645.8,
+    "direct_flight": "Yes",
+    "flight_price_inr": 10000
+  },
+  {
+    "origin_airport": "JAI",
+    "origin_state": "Rajasthan",
+    "destination_airport": "BOM",
+    "destination_state": "Maharashtra",
+    "distance_km": 660.1,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "JAI",
+    "origin_state": "Rajasthan",
+    "destination_airport": "CCU",
+    "destination_state": "West Bengal",
+    "distance_km": 1528.8,
+    "direct_flight": "Yes",
+    "flight_price_inr": 10000
+  },
+  {
+    "origin_airport": "JAI",
+    "origin_state": "Rajasthan",
+    "destination_airport": "HYD",
+    "destination_state": "Telangana",
+    "distance_km": 1256.7,
+    "direct_flight": "Yes",
+    "flight_price_inr": 8000
+  },
+  {
+    "origin_airport": "LKO",
+    "origin_state": "Uttar Pradesh",
+    "destination_airport": "BLR",
+    "destination_state": "Karnataka",
+    "distance_km": 1641.8,
+    "direct_flight": "Yes",
+    "flight_price_inr": 10000
+  },
+  {
+    "origin_airport": "LKO",
+    "origin_state": "Uttar Pradesh",
+    "destination_airport": "BOM",
+    "destination_state": "Maharashtra",
+    "distance_km": 1248.6,
+    "direct_flight": "Yes",
+    "flight_price_inr": 8000
+  },
+  {
+    "origin_airport": "LKO",
+    "origin_state": "Uttar Pradesh",
+    "destination_airport": "PAT",
+    "destination_state": "Bihar",
+    "distance_km": 224.4,
+    "direct_flight": "Yes",
+    "flight_price_inr": 4000
+  },
+  {
+    "origin_airport": "MAA",
+    "origin_state": "Tamil Nadu",
+    "destination_airport": "AMD",
+    "destination_state": "Gujarat",
+    "distance_km": 1432.9,
+    "direct_flight": "Yes",
+    "flight_price_inr": 9000
+  },
+  {
+    "origin_airport": "MAA",
+    "origin_state": "Tamil Nadu",
+    "destination_airport": "BLR",
+    "destination_state": "Karnataka",
+    "distance_km": 291.3,
+    "direct_flight": "Yes",
+    "flight_price_inr": 4000
+  },
+  {
+    "origin_airport": "MAA",
+    "origin_state": "Tamil Nadu",
+    "destination_airport": "BOM",
+    "destination_state": "Maharashtra",
+    "distance_km": 1038.4,
+    "direct_flight": "Yes",
+    "flight_price_inr": 8000
+  },
+  {
+    "origin_airport": "MAA",
+    "origin_state": "Tamil Nadu",
+    "destination_airport": "CCU",
+    "destination_state": "West Bengal",
+    "distance_km": 1373.2,
+    "direct_flight": "Yes",
+    "flight_price_inr": 9000
+  },
+  {
+    "origin_airport": "MAA",
+    "origin_state": "Tamil Nadu",
+    "destination_airport": "COK",
+    "destination_state": "Kerala",
+    "distance_km": 350.2,
+    "direct_flight": "Yes",
+    "flight_price_inr": 4000
+  },
+  {
+    "origin_airport": "MAA",
+    "origin_state": "Tamil Nadu",
+    "destination_airport": "HYD",
+    "destination_state": "Telangana",
+    "distance_km": 619.4,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "MAA",
+    "origin_state": "Tamil Nadu",
+    "destination_airport": "PNQ",
+    "destination_state": "Maharashtra",
+    "distance_km": 1051.8,
+    "direct_flight": "Yes",
+    "flight_price_inr": 8000
+  },
+  {
+    "origin_airport": "MAA",
+    "origin_state": "Tamil Nadu",
+    "destination_airport": "TRV",
+    "destination_state": "Kerala",
+    "distance_km": 676.3,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "MAA",
+    "origin_state": "Tamil Nadu",
+    "destination_airport": "VTZ",
+    "destination_state": "Andhra Pradesh",
+    "distance_km": 1228.7,
+    "direct_flight": "Yes",
+    "flight_price_inr": 8000
+  },
+  {
+    "origin_airport": "PNQ",
+    "origin_state": "Maharashtra",
+    "destination_airport": "AMD",
+    "destination_state": "Gujarat",
+    "distance_km": 723.2,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "PNQ",
+    "origin_state": "Maharashtra",
+    "destination_airport": "BLR",
+    "destination_state": "Karnataka",
+    "distance_km": 512.1,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "PNQ",
+    "origin_state": "Maharashtra",
+    "destination_airport": "CCU",
+    "destination_state": "West Bengal",
+    "distance_km": 1245.9,
+    "direct_flight": "Yes",
+    "flight_price_inr": 8000
+  },
+  {
+    "origin_airport": "PNQ",
+    "origin_state": "Maharashtra",
+    "destination_airport": "HYD",
+    "destination_state": "Telangana",
+    "distance_km": 515.8,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "PNQ",
+    "origin_state": "Maharashtra",
+    "destination_airport": "MAA",
+    "destination_state": "Tamil Nadu",
+    "distance_km": 1051.8,
+    "direct_flight": "Yes",
+    "flight_price_inr": 8000
+  },
+  {
+    "origin_airport": "PNQ",
+    "origin_state": "Maharashtra",
+    "destination_airport": "NAG",
+    "destination_state": "Maharashtra",
+    "distance_km": 461.3,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "RPR",
+    "origin_state": "Chhattisgarh",
+    "destination_airport": "CCU",
+    "destination_state": "West Bengal",
+    "distance_km": 966.0,
+    "direct_flight": "Yes",
+    "flight_price_inr": 8000
+  },
+  {
+    "origin_airport": "RPR",
+    "origin_state": "Chhattisgarh",
+    "destination_airport": "HYD",
+    "destination_state": "Telangana",
+    "distance_km": 497.1,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "RPR",
+    "origin_state": "Chhattisgarh",
+    "destination_airport": "IDR",
+    "destination_state": "Madhya Pradesh",
+    "distance_km": 552.7,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "SHL",
+    "origin_state": "Meghalaya",
+    "destination_airport": "CCU",
+    "destination_state": "West Bengal",
+    "distance_km": 297.3,
+    "direct_flight": "Yes",
+    "flight_price_inr": 4000
+  },
+  {
+    "origin_airport": "VTZ",
+    "origin_state": "Andhra Pradesh",
+    "destination_airport": "AMD",
+    "destination_state": "Gujarat",
+    "distance_km": 826.9,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "VTZ",
+    "origin_state": "Andhra Pradesh",
+    "destination_airport": "BBI",
+    "destination_state": "Odisha",
+    "distance_km": 646.3,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "VTZ",
+    "origin_state": "Andhra Pradesh",
+    "destination_airport": "BLR",
+    "destination_state": "Karnataka",
+    "distance_km": 731.9,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "VTZ",
+    "origin_state": "Andhra Pradesh",
+    "destination_airport": "BOM",
+    "destination_state": "Maharashtra",
+    "distance_km": 594.1,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "VTZ",
+    "origin_state": "Andhra Pradesh",
+    "destination_airport": "CCU",
+    "destination_state": "West Bengal",
+    "distance_km": 778.0,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  },
+  {
+    "origin_airport": "VTZ",
+    "origin_state": "Andhra Pradesh",
+    "destination_airport": "HYD",
+    "destination_state": "Telangana",
+    "distance_km": 496.4,
+    "direct_flight": "Yes",
+    "flight_price_inr": 6000
+  }
+]
